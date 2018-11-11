@@ -29,10 +29,12 @@ int GetFolder()
 
 int main() // so no warnings about unref params
 {
-	if (setBackground()) {
+	if (setBackground()) 
+	{
 		cout << "Applied Background: " << filePath << "\n";
 	}
-	else {
+	else 
+	{
 		DWORD DWLastError = GetLastError();
 		cout << "\nError: " << std::hex << DWLastError;
 	}
@@ -52,8 +54,7 @@ bool setBackground()
 	stringstream ssFilePath;
 	ssFilePath << strLocalDirectory << bgChoice << ".jpg";
 	//Returns true on success, false otherwise. 
-	if (SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, (PVOID)ssFilePath.str().c_str(),
-		SPIF_UPDATEINIFILE | SPIF_SENDCHANGE) != 0)
+	if (SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, (PVOID)ssFilePath.str().c_str(), SPIF_UPDATEINIFILE | SPIF_SENDCHANGE) != 0)
 	{
 		filePath = ssFilePath.str();
 		return true;
