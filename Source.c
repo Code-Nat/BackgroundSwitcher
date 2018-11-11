@@ -14,17 +14,18 @@ using namespace std;
 
 bool setBackground();
 
-const string strLocalDirectory = "%USERPROFILE%//AppData//Local//Packages//Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy//LocalState//Assets"; // TWEAKED PATH
+const string strLocalDirectory = "%USERPROFILE%//AppData//Local//Packages//Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy//LocalState//Assets"; // Windows Lock Screen photos location
 
 string filePath;
 
-
+/*
 int GetFolder()
 {
 	std::string path = "/path/to/directory";
 	for (auto & p : fs::directory_iterator(path))
 		std::cout << p << std::endl;
 }
+*/
 
 int main() // so no warnings about unref params
 {
